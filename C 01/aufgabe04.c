@@ -23,19 +23,24 @@
 
 /* Hier kommt euer Programmcode hin */
 int main(){
-    int x = lies_ganzzahl();
-    int counter = 0;
-    for (int i = 2; i < x; i++){
-        if (is_prime(i) && x % i == 0){
+    int x = lies_ganzzahl(); // x speichert aktuelle Benutzereingabe Wert
+    int counter = 0; // der counter zählt die Anzahl der teilenden Primzahlen
+    
+    /*
+    i ist eine Laufvariable die bis i < x läuft
+    Wenn x kein Rest hat und es eine Primzahl ist, dann wird der counter um 1 erhöht
+    */
+    
+    for (int i = 2; i <= x; i++){
+        if (x % i == 0 && is_prime(i)){
             counter++;
         }
     }
-    if (is_prime(x)){
-        counter++;
-    }
     drucke_ganzzahl(counter);
+    return 0;
 }
 
+//erklärung in aufgabe03.c
 int is_prime(int x){
     int is_prime = 0;
 
@@ -53,5 +58,6 @@ int is_prime(int x){
     }else if (!is_prime || x == 1){
         return 0;
     }
+    return -1;
 }
 
