@@ -12,6 +12,6 @@
 
 /* Hier kommt euer Programmcode hin */
 int main(){
-    drucke_text("Hallo Alpro Team");
+    drucke_text("Hallo Alpro Team"); // druckt Text in die Konsole
     return 0;
 }
