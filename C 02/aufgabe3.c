@@ -1,4 +1,3 @@
-#include "alpro_math.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -15,11 +14,32 @@
 
 /* Hier kommt euer Programmcode hin */
 
+// 
+// 
+int ggT(int x, int y){
+    int rest;
+    if (x == 0) return abs(y);
+    if (y == 0) return abs(x);
+    do {
+        rest = x % y;
+        x = y;
+        y = rest;
+    } while (y != 0);
+
+    return abs(x);
+}
+
+int kgV(int x, int y){
+
+    return 24;
+}
+
 int main() {
   // Lies x ein (ein bisschen Magie)
   char buf[0x30];
-  int x = atoi(fgets(buf, 0x30, stdin));
-  int y = atoi(fgets(buf, 0x30, stdin));
-  printf("ggT(x,y) = %d, kgV(x,y) = %d\n", ggT(x,y), kgV(x,y));
+  int x = atoi(fgets(buf, 0x30, stdin)); // Lese x ein
+  int y = atoi(fgets(buf, 0x30, stdin)); // Lese y ein
+  
+  printf("ggT(x,y) = %d, kgV(x,y) = %d\n", ggT(x,y), kgV(x,y)); // Rufe Funktion ggT und kgV auf und printe den Wert von ggT(x,y), kgV(x,y) 
   return 0;
 }
