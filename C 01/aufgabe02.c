@@ -17,11 +17,12 @@
 
 /* Hier kommt euer Programmcode hin */
 int main(){
-    int x = lies_ganzzahl();
+    int x = lies_ganzzahl(); // x speichert aktuelle Benutzereingabe Wert
     
-    int rest = (x % 3); //rest beschreit den Rest der x/3 division
-    
-    if (rest == 0){
+    int rest = (x % 3); // rest beschreit den Rest der x/3 division
+
+    // Prüfe auf die Fälle der Aufgabenstellung und gebe jeweiligen Wert aus
+    if (rest == 0){   
         drucke_ganzzahl((x/3));
     }else if (rest == 1){
         drucke_ganzzahl(42);
